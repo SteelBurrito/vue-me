@@ -1,7 +1,9 @@
 <template>
     <div class='menu-container blue-gradient'>
         <div class="page-heading">
-            <h1>bloggo.club</h1>
+            <transition name="slide-fade">
+                <h1 v-if="show">bloggo.club</h1>
+            </transition>
             <p>Personal webpage managed by Antonio Kevin Christophorus</p>
         </div>
         <nav>
@@ -18,7 +20,13 @@
 <script>
 export default {
   data() {
-    return {};
-  }
+    return {
+        show: false,
+    };
+  },
+
+  mounted(){
+      this.show = true;
+  },
 };
 </script>
