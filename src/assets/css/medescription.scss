@@ -1,0 +1,40 @@
+/* PERSONAL INFO SECTION STYLING START */
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  align-items: center;
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.me-description {
+  align-items: center;
+}
+
+.me-paragraph-one,
+.me-paragraph-two {
+  line-height: 1.6;
+}
+
+.me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: auto;
+  width: 80%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+/* PERSONAL INFO SECTION STYLING END  */
