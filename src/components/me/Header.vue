@@ -6,7 +6,7 @@
         </div>
         <nav>
             <ul>
-                <li>About Me</li>
+                <router-link to="/about-me" tag="li">About Me</router-link>
                 <li>What I Do</li>
                 <li>Contact Me</li>
             </ul>
@@ -18,9 +18,7 @@
 <script>
 export default {
   data() {
-      return {
-          
-      }
-  },
-}
+    return {};
+  }
+};
 </script>

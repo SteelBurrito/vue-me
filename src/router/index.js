@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/me/HelloWorld';
 import Header from '@/components/me/Header';
+import AboutMe from '@/components/me/MeDescription';
 
 Vue.use(Router);
 
@@ -13,9 +13,9 @@ export default new Router({
       component: Header,
     },
     {
-      path: '/test',
-      name: 'HelloWorld',
-      component: HelloWorld,
+      path: '/about-me',
+      name: 'AboutMe',
+      component: AboutMe,
     },
   ],
 });
