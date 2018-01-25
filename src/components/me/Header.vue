@@ -1,13 +1,16 @@
 <template>
     <div class='menu-container blue-gradient'>
         <div class="page-heading">
-            <div class='page-title'>
-                <h1>bloggo.club</h1>
-            </div>
-            <div class="page-description">
-                <p>Personal webpage managed by Antonio Kevin Christophorus</p>
-            </div>
+            <h1>bloggo.club</h1>
+            <p>Personal webpage managed by Antonio Kevin Christophorus</p>
         </div>
+        <nav>
+            <ul>
+                <li>About Me</li>
+                <li>What I Do</li>
+                <li>Contact Me</li>
+            </ul>
+        </nav>
     </div>
     <!-- <component v-bind:is="renderDescription"></component> -->
 </template>
