@@ -1,4 +1,5 @@
 /* PERSONAL INFO SECTION STYLING START */
+
 // .header-container {
 //   display: flex;
 //   justify-content: center;
@@ -13,16 +14,25 @@
 //     }
 //   }
 // } 
-.white-gradient {
-  background: #ECE9E6;
-  /* fallback for old browsers */
-
-  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
-  /* Chrome 10-25, Safari 5.1-6 */
-
-  background: linear-gradient(to right, #FFFFFF, #ECE9E6);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+@import url(https://fonts.googleapis.com/css?family=Expletus+Sans);
+// Animation css
+.slide-fade-enter-active {
+  transition: all .8s ease;
 }
+
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */
+
+  {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
 .header {
   display: flex;
   flex-flow: column;
@@ -31,8 +41,8 @@
   justify-content: center;
   height: 100vh;
   width: 100%;
-  text-align: justify;
   h2 {
+    text-align: center;
     width: 50%;
     font-size: 50px;
     line-height: 1.6;
@@ -43,25 +53,48 @@
   }
 }
 
-.intro-text {
-  h2{
-    
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: auto;
+  justify-content: center;
+  width: 100%;
+  background-color: cadetblue;
+  
+}
+
+.frontend {
+
+}
+
+.backend {
+
+}
+
+
+.picture {
+  img {
+    height: auto;
+    width: 80%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
   }
 }
-  // .me {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// }
 
-// .logo {
-//   height: auto;
-//   width: 80%;
-//   -webkit-border-radius: 50%;
-//   -moz-border-radius: 50%;
-//   -ms-border-radius: 50%;
-//   -o-border-radius: 50%;
-//   border-radius: 50%;
-// }
-/* PERSONAL INFO SECTION STYLING END  */
+  // .css3::-moz-progress-bar,
+  // .php::-moz-progress-bar {
+  // {
+  //     /* Gradient background with Stripes */
+  //     background-image: -moz-linear-gradient( 135deg, transparent, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%), -moz-linear-gradient( top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .2)), -moz-linear-gradient( left, #09c, #ff0);
+  // }
+  //   .jquery::-moz-progress-bar,
+  //   .node-js::-moz-progress-bar {
+  //     /* Gradient background with Stripes */
+  //     background-image: -moz-linear-gradient( 135deg, transparent, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%), -moz-linear-gradient( top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .2)), -moz-linear-gradient( left, #09c, #690);
+  //   }
+  // }
+  /* PERSONAL INFO SECTION STYLING END  */

@@ -9,24 +9,39 @@
         <nav>
             <ul>
                 <router-link to="/about-me" tag="li">About Me</router-link>
-                <li>What I Do</li>
-                <li>Contact Me</li>
+                <!-- <li @click="showModal">Let's Talk</li> -->
             </ul>
         </nav>
+        <ContactMe v-show="isContactMeVisible" @close="closeModal"/>
     </div>
-    <!-- <component v-bind:is="renderDescription"></component> -->
 </template>
 
 <script>
+import ContactMe from "@/components/me/ContactMe";
+import { EventBus } from "../../store/event-bus";
 export default {
   data() {
     return {
-        show: false,
+      show: false,
+      isContactMeVisible: false
     };
   },
-
-  mounted(){
-      this.show = true;
+  components: {
+    ContactMe: ContactMe
   },
+  //   beforeMount(){
+  //       this.ContactMe.show = false;
+  //   },
+  mounted() {
+    this.show = true;
+  },
+  methods: {
+    showModal() {
+      this.isContactMeVisible = true;
+    },
+    closeModal() {
+      this.isContactMeVisible = false;
+    }
+  }
 };
 </script>
