@@ -9,39 +9,41 @@
         <nav>
             <ul>
                 <router-link to="/about-me" tag="li">About Me</router-link>
-                <!-- <li @click="showModal">Let's Talk</li> -->
+                <li id="show-modal" @click="showModal=true">Let's Talk</li>
             </ul>
         </nav>
-        <ContactMe v-show="isContactMeVisible" @close="closeModal"/>
+        <transition name="modal">
+            <ContactMe v-if="showModal" @close="showModal=false"></ContactMe>
+        </transition>
     </div>
 </template>
 
 <script>
-import ContactMe from "@/components/me/ContactMe";
-import { EventBus } from "../../store/event-bus";
+import ContactMe from '@/components/me/ContactMe'
+import { EventBus } from '../../store/event-bus'
 export default {
   data() {
     return {
       show: false,
-      isContactMeVisible: false
+      showModal: false,
     };
   },
-  components: {
-    ContactMe: ContactMe
+  components:{
+      'ContactMe': ContactMe,
   },
-  //   beforeMount(){
-  //       this.ContactMe.show = false;
-  //   },
+//   beforeMount(){
+//       this.ContactMe.show = false;
+//   },
   mounted() {
     this.show = true;
   },
-  methods: {
-    showModal() {
-      this.isContactMeVisible = true;
-    },
-    closeModal() {
-      this.isContactMeVisible = false;
-    }
-  }
+  methods:{
+    //   showModal() {
+    //       this.isContactMeVisible = true;
+    //   },
+    //   closeModal() {
+    //       this.isContactMeVisible = false;
+    //   },
+  },
 };
 </script>
